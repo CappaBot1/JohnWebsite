@@ -97,6 +97,14 @@ section.image-row img {
     flex-direction: column;
 }
 
+/* contact info list */
+#contact-info ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+/* media queries */
+
 @media screen and (max-width: 800px) {
     section.image-row {
         flex-direction: column;
@@ -117,6 +125,8 @@ section.image-row img {
         width: 100% !important;
     }
 }
+
+/* keyframes for animations */
 
 @keyframes animate-body {
     0% {
