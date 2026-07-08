@@ -322,24 +322,47 @@ form input[type="submit"]:hover {
 
 #contact-info > p {
     animation: fade-fly-down var(--motion-time) ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 }
 
-.image-row > * {
+.image-row img {
     animation: fade-fly-down var(--motion-time) ease-out;
+    animation-delay: inherit;
+    animation-fill-mode: both;
+}
+
+main {
+    --delay-gradient: 0.5s;
+    --delay-all: 0.2s;
+}
+
+main > *:nth-of-type(2) {
+    animation-delay: calc(1 * var(--delay-gradient) + var(--delay-all));
+}
+
+main > *:nth-of-type(3) {
+    animation-delay: calc(2 * var(--delay-gradient) + var(--delay-all));
+}
+
+main > *:nth-of-type(4) {
+    animation-delay: calc(3 * var(--delay-gradient) + var(--delay-all));
 }
 
 @media screen and (min-width: 800px) {
     .image-row > :first-child {
-        animation: fade-fly-left var(--motion-time) ease-out;
+        animation-name: fade-fly-left;
     }
 
     .image-row > :last-child {
-        animation: fade-fly-right var(--motion-time) ease-out;
+        animation-name: fade-fly-right;
     }
 }
 
 .video-montage > * {
     animation: fade-fly-down var(--motion-time) ease-out;
+    animation-fill-mode: both;
+    animation-delay: inherit;
 }
 
 #contact-form {
