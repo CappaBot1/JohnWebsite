@@ -164,30 +164,27 @@ form :is(label, input, textarea) {
     font-size: 1rem;
 }
 
-input[type=text], textarea {
+form :is(input, textarea) {
     margin-bottom: 8px;
-}
-
-input, textarea {
     border-radius: 8px;
     box-sizing: border-box;
     padding: 0.5em;
     border: 2px solid var(--border-color);
 }
 
-textarea {
+form textarea {
     min-height: 5em;
     width: 100%;
     resize: vertical;
 }
 
-input[type="submit"] {
+form input[type="submit"] {
     background-color: var(--confirm);
     width: min-content;
     padding: 0.5em 1em;
     transition: background-color 0.2s;
 }
 
-input[type="submit"]:hover {
+form input[type="submit"]:hover {
     background-color: var(--confirm-hover);
 }
