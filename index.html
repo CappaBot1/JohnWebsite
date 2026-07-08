@@ -3,10 +3,10 @@
     <head>
         <title>John Hassel portfolio</title>
 
-        <meta name="viewport" content="width=device-width">
-
         <link rel="stylesheet" type="text/css" href="/main.css">
         <script defer src="/main.js"></script>
+
+        <meta name="viewport" content="width=device-width">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
                         alt="Photo of John Hassel"
                     >
                 </div>
-                
+
                 <section id="contact-info">
                     <h3>John Hassel</h3>
                     <ul>
@@ -80,7 +80,7 @@
                 >
             </section>
 
-            <form id="contact-form">
+            <form id="contact-form" action="/form_submit.html">
                 <label for="fname">First Name</label>
                 <input
                     type="text"
@@ -97,6 +97,14 @@
                     placeholder="Hassel"
                 >
 
+                <label for="email">Your email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="johnhassel@john.hassel"
+                >
+
                 <label for="subject">Subject</label>
                 <textarea
                     id="subject"
@@ -104,7 +112,7 @@
                     placeholder="Wow, your website is so cool. I also like your photography."
                 ></textarea>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Send">
             </form>
         </main>
     </body>
