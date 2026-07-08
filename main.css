@@ -2,12 +2,17 @@
     --background-color: blanchedalmond;
     --body-color: bisque;
     --border-color: burlywood;
-    --normal-gap: 2em;
+    --normal-gap: 32px;
 }
 
 html {
-    width: 100%;
     background-color: var(--background-color);
+
+    width: 100%;
+    min-height: 100%;
+
+    font-size: large;
+    font-family: "Inter", sans-serif;
 }
 
 body {
@@ -19,15 +24,17 @@ body {
     max-width: 1000px;
     box-sizing: border-box;
     margin: auto;
-    padding: 2em;
+    padding: var(--normal-gap);
+
+    /* animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-name: animate-body; */
 }
 
-img, video {
-    border-radius: 1em;
-}
-
-video {
-    width: 100%;
+main * {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    /*animation-fill-mode: backwards;*/
 }
 
 main {
@@ -36,23 +43,27 @@ main {
     gap: var(--normal-gap);
 }
 
-section.double-images {
+h3 {
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+
+img,
+video {
+    border-radius: 1em;
+}
+
+video {
+    width: 100%;
+}
+
+section.image-row {
     display: flex;
     flex-direction: row;
     gap: var(--normal-gap);
 }
 
-@media screen and (max-width: 800px) {
-    section.double-images {
-        flex-direction: column;
-    }
-
-    #photo-contact img {
-        flex: 2 2 auto;
-    }
-}
-
-section.double-images img {
+section.image-row img {
     width: 100%;
     height: auto;
     min-width: 0;
@@ -63,16 +74,16 @@ section.double-images img {
     gap: var(--normal-gap);
 }
 
-#photo-contact img {
-    flex: 1 1 auto;
-    size: auto;
+#photo-container {
+    flex: 1 1 0;
 }
 
-#photo-contact #contact-info {
-    flex: 2 2 auto;
+#photo-container img {
+    width: 100%;
 }
 
 #contact-info {
+    flex: 2 2 0;
     flex-direction: column;
 }
 
@@ -80,3 +91,49 @@ section.double-images img {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 800px) {
+    section.image-row {
+        flex-direction: column;
+    }
+
+    #photo-container {
+        flex: 2 2 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #photo-contact {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #photo-container {
+        width: 100% !important;
+    }
+}
+
+@keyframes animate-body {
+    0% {
+        opacity: 0;
+        transform: scale(10, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes animate-fade {
+    0% {
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
