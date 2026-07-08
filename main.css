@@ -18,6 +18,9 @@
     --body-color:          #474747;
     --border-color:        #3b3b3b;
 
+    --text-form:           #000000;
+    --background-form:     #ffffff;
+
     --link-colour:         #5e7dff;
     --link-hover-colour:   #4d6ce9;
     --link-active-colour:  #2e47ad;
@@ -168,11 +171,19 @@ form :is(label, input, textarea) {
 }
 
 form :is(input, textarea) {
+    color: var(--text-form);
+    background-color: var(--background-form);
+
     margin-bottom: 8px;
     border-radius: 8px;
     box-sizing: border-box;
     padding: 0.5em;
     border: 2px solid var(--border-color);
+}
+
+form ::placeholder {
+    color: var(--text-form);
+    opacity: 0.5;
 }
 
 form textarea {
@@ -182,11 +193,13 @@ form textarea {
 }
 
 form input[type="submit"] {
+    color: var(--text-colour);
     background-color: var(--confirm);
+    cursor: pointer;
+
     width: min-content;
     padding: 0.5em 1em;
     transition: background-color 0.2s;
-    cursor: pointer;
 }
 
 form input[type="submit"]:hover {
