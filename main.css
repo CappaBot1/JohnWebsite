@@ -2,6 +2,10 @@
     --background-color: blanchedalmond;
     --body-color: bisque;
     --border-color: burlywood;
+
+    --confirm: #85dd85;
+    --confirm-hover: #7dc97d;
+
     --normal-gap: 32px;
 }
 
@@ -137,3 +141,37 @@ section.image-row img {
     }
 }
 
+/* form styling */
+
+form * {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input[type=text], textarea {
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 0.5em;
+    border: 2px solid var(--border-color);
+}
+
+textarea {
+    min-height: 5em;
+    width: 100%;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: var(--confirm);
+    width: min-content;
+    padding: 0.5em 1em;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--confirm-hover);
+}
