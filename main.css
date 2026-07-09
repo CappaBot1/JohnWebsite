@@ -206,6 +206,12 @@ form input[type="submit"]:hover {
     background-color: var(--confirm-hover);
 }
 
+footer {
+    text-align: center;
+    font-size: 0.75em;
+    opacity: 0.5;
+}
+
 /* animations */
 :root {
     --motion-time: 0.5s;
