@@ -7,6 +7,7 @@ const servePaths = [
     "main.css",
     "main.js",
     "sitemap.xml",
+    "robots.txt",
 ].map(x => "/" + x);
 
 Deno.serve((req) => {
