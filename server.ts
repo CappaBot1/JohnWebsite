@@ -6,6 +6,7 @@ const servePaths = [
     "form_submit.html",
     "main.css",
     "main.js",
+    "sitemap.xml",
 ].map(x => "/" + x);
 
 Deno.serve((req) => {
