@@ -1,4 +1,8 @@
 {
+    "tasks": {
+        "dev":   "deno run --allow-read=. --allow-net=0.0.0.0:8000 --watch=. server.ts",
+        "serve": "deno run --allow-read=. --allow-net=0.0.0.0:8000 server.ts"
+    },
     "fmt": {
         "indentWidth": 4
     },
